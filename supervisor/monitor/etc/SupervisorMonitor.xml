@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monitorConfig>
+
+	<!-- Connections to Supervisors -->
+	<connections>
+		<supervisorServer id="connection1" host="192.168.2.140" />
+		<supervisorServer id="connection2" host="panda.itos.org" port="4086" />
+		<supervisorMonitor host="192.168.1.255" port="4444"/>
+		<asterix253 id="connection3" host="127.12.230.7" port="4086" />
+		<asterix253 id="asterix1" host="0.0.0.0" port="30000" />
+	</connections>
+
+	<!-- Data Sources -->
+	<datasources>
+		<networkDatasource 	id="network1" connection="connection1" />
+		<networkDatasource 	id="network2" connection="connection1" />
+		<hostDatasource 	id="hostDS1" connection="connection1" />
+		<groupsDatasource	id="groupsDS1" connection="connection1" />
+		<asterix253MORLIDatasource id="asterix253DS1" connection="asterix1" />
+		<asterix253RLKDatasource id="asterix253DS2" connection="asterix1" />
+		<folderDatasource id="folder1" connection="connection1" />
+		<snmpDatasource id="snmp1" connection="connection1">
+			<local variable="SNMPv2-MIB::sysDescr.0">
+				<binding value="Panasonic KX-MB2020" state="2" />
+				<binding value="" state="3" />
+			</local>
+		</snmpDatasource>
+	</datasources>
+
+	<contextMenus>
+		<contextMenu id="hostMenu">
+			<item action="shutdown" style="background-color: green;" >Shutdown</item>
+			<item action="reboot" style="background-color: red;" >Reboot</item>
+			<item action="toggleStatus" style="border: solid 3px black;" >Status On/Off</item>
+			<item action="requestRemoteLogs" confirm="Want to collect logs?">Collect Logs</item>
+			<item action="startScript" argument="sc1_1">Script 1_1</item>
+			<item action="snmp" argument="local|test|value 1">SNMP test value 1</item>
+			<item action="snmp" argument="local|test|value 2">SNMP test value 2</item>
+		</contextMenu>
+        <contextMenu id="tools">
+			<item action="startScript" argument="sc1_1">Script 1_1</item>
+		</contextMenu>
+	</contextMenus>
+
+    <toolsMenu id="tools" connection="connection1" />
+    
+	<styles>
+		<style id="host_style">
+			<top_left>color: black;</top_left>
+			<top_center>color: white;</top_center>
+			<top_right>color: gray;</top_right>
+			<bottom_left>color: red;</bottom_left>
+			<bottom_center>color: green;</bottom_center>
+			<bottom_right>color: blue;</bottom_right>
+			<center>color: yellow;</center>
+		</style>
+		<style id="network_style">
+			<top_left>color: black;</top_left>
+			<top_center>color: white;</top_center>
+			<top_right>color: gray;</top_right>
+			<bottom_left>color: red;</bottom_left>
+			<bottom_center>color: green;</bottom_center>
+			<bottom_right>color: blue;</bottom_right>
+			<center>color: yellow;</center>
+		</style>
+	</styles>
+
+		<!--
+		id - (string)
+		zOrder - (int)
+		showTitle - (bool)
+		showBOrder - (bool)
+		title - (string)
+		parentId - (string)
+		-->
+		<widget id="folder1" zOrder="2" showTitle="false" showBorder="false" parentId="host1">
+			<description>Search for UTTT</description>
+			<boundingRect x="-40" y="5" width="30" height="30" />
+			
+			<databinding>
+				<binding property="state" datasource="folder1" datafield="state" datakey="UTTT" /> 
+				<binding property="description" datasource="folder1" datafield="itemName" datakey="UTTT" />
+			</databinding>
+
+			<states>
+				<default state="1" />
+				<state status="0,1">
+					<image>../share/images/NetworkDisable.png</image>
+				</state>
+				<state status="2">
+					<image>../share/images/NetworkOK.png</image>
+				</state>
+				<state status="3,4,5">
+					<image>../share/images/NetworkAlarm.png</image>
+				</state>
+			</states>
+			
+			
+		</widget>
+	<widgets>
+		<widget id="Network0" type="NETWORK" zOrder="2" showTitle="false" showBorder="false" parentId="host1">
+			<description>Network #0</description>
+			<boundingRect x="152" y="5" width="30" height="30" />
+			
+			<databinding>
+				<binding property="state" datasource="network1" datafield="state" datakey="192.20.1.21" /> 
+				<binding property="description" datasource="network1" datafield="networkName" datakey="192.20.1.21" />
+			</databinding>
+
+			<states>
+				<default state="1" />
+				<state status="0,1">
+					<image>../share/images/NetworkDisable.png</image>
+				</state>
+				<state status="2">
+					<image>../share/images/NetworkOK.png</image>
+				</state>
+				<state status="3,4,5">
+					<image>../share/images/NetworkAlarm.png</image>
+				</state>
+			</states>
+			
+			
+		</widget>
+		<widget id="Network1" type="NETWORK" zOrder="2" showTitle="false" showBorder="false" parentId="host1">
+			<description>Network #1</description>
+			<boundingRect x="152" y="35" width="30" height="30" />
+			
+			<databinding>
+				<binding property="state" datasource="network1" datafield="state" datakey="192.168.*.*" /> 
+				<binding property="description" datasource="network1" datafield="networkName" datakey="192.168.*.*" />
+			</databinding>
+
+			<states>
+				<default state="0" />
+				<state status="0,1">
+					<image>../share/images/NetworkDisable.png</image>
+				</state>
+				<state status="2">
+					<image>../share/images/NetworkOK.png</image>
+				</state>
+				<state status="3,4,5">
+					<image>../share/images/NetworkAlarm.png</image>
+				</state>
+			</states>
+			
+			
+		</widget>
+		<widget id="Network2" type="NETWORK" zOrder="2" showTitle="false" showBorder="false" parentId="host1">
+			<boundingRect x="152" y="65" width="30" height="30" />
+			<description>Network #2</description>
+			<databinding>
+				<binding property="state" datasource="network1" datafield="state" datakey="2" /> 
+				<binding property="description" datasource="network1" datafield="networkName" datakey="2" />
+			</databinding>
+
+			<states>
+				<default state="0" />
+				<state status="0,1">
+					<image>../share/images/NetworkDisable.png</image>
+				</state>
+				<state status="2">
+					<image>../share/images/NetworkOK.png</image>
+				</state>
+				<state status="3,4,5">
+					<image>../share/images/NetworkAlarm.png</image>
+				</state>
+			</states>
+			
+			
+		</widget>
+		<widget id="Network3" type="NETWORK" zOrder="2" showTitle="false" showBorder="false" parentId="host1">
+			<boundingRect x="152" y="95" width="30" height="30" />
+			<description>Network #3</description>
+			<databinding>
+				<binding property="state" datasource="network1" datafield="state" datakey="3" /> 
+				<binding property="description" datasource="network1" datafield="networkName" datakey="3" />
+			</databinding>
+
+			<states>
+				<default state="0" />
+				<state status="0,1">
+					<image>../share/images/NetworkDisable.png</image>
+				</state>
+				<state status="2">
+					<image>../share/images/NetworkOK.png</image>
+				</state>
+				<state status="3,4,5">
+					<image>../share/images/NetworkAlarm.png</image>
+				</state>
+			</states>
+			
+			
+		</widget>
+		<widget id="Network4" type="NETWORK" zOrder="2" showTitle="false" showBorder="false" parentId="host1">
+			<boundingRect x="152" y="125" width="30" height="30" />
+			<description>Network #4</description>
+			<databinding>
+				<binding property="state" datasource="network1" datafield="state" datakey="4" /> 
+				<binding property="description" datasource="network1" datafield="networkName" datakey="4" />
+			</databinding>
+
+			<states>
+				<default state="0" />
+				<state status="0,1">
+					<image>../share/images/NetworkDisable.png</image>
+				</state>
+				<state status="2">
+					<image>../share/images/NetworkOK.png</image>
+				</state>
+				<state status="3,4,5">
+					<image>../share/images/NetworkAlarm.png</image>
+				</state>
+			</states>
+			
+			
+		</widget>
+		<widget id="host1" 
+			zOrder="8" 
+			showTitle="false" 
+			showBorder="true" 
+			styleId="host_style" >
+			<description>Local Supervisor server host</description>
+			<boundingRect x="110" y="75" width="150" height="160" />
+			
+			
+			<databinding>
+				<binding property="textTL" datasource="hostDS1" datafield="name" />
+				<binding property="state"    datasource="hostDS1" datafield="state" />
+				<binding property="controlledConnection" datasource="hostDS1" datafield="connectionID" />
+			</databinding>
+			
+			<menu id="hostMenu" connection="connection1" />
+
+			<states>
+				<default state="0" />
+				<state status="0">
+					<image>../share/images/HostHZ.png</image>
+				</state>
+				<state status="1">
+					<image>../share/images/HostOff.png</image>
+				</state>
+				<state status="3">
+					<image>../share/images/HostAlarm.png</image>
+				</state>
+				<state status="6">
+					<image>../share/images/HostDisable.png</image>
+				</state>
+				<state status="2">
+					<image>../share/images/HostOK.png</image>
+				</state>
+				<state status="7">
+					<image>../share/images/HostWarning.png</image>
+				</state>
+			</states>
+		</widget>
+		<widget id="group_wdg1"
+			zOrder="3"
+			parentId="host1"
+			showBorder="true" >
+			<description>Local Supervisor active group name</description>
+			<boundingRect x="5" y="134" width="100" height="20" />
+			<databinding>
+				<binding property="textC" datasource="groupsDS1" datafield="activeGroup" />
+			</databinding>
+			<states>
+				<default state="0">
+					<backgroundImage>../share/images/bg3.png</backgroundImage>
+				</default>
+				<state status="0,1,2,3,4,5" />
+			</states>
+		</widget>
+		<widget id="sector_label1"
+			zOrder="4"
+			parentId="host1" 
+			showBorder="true">
+			<description>Local Supervisor active cwp sector</description>
+			<boundingRect x="5" y="114" width="40" height="20" />
+			<databinding>
+				<binding property="textC" datasource="hostDS1" datafield="sectors" />
+			</databinding>
+			<states>
+				<default state="0">
+					<backgroundImage>../share/images/bg2.png</backgroundImage>
+				</default>
+				<state status="0,1,2,3,4,5" />
+			</states>
+		</widget>
+		<widget id="asterix1" 
+			zOrder="8" 
+			showTitle="true" 
+			showBorder="false"
+                        name="Name1" >
+			<description>Local asterix253 server host</description>
+			<boundingRect x="110" y="275" width="150" height="160" />
+			
+			
+			<databinding>
+				<binding property="textTL" datasource="asterix253DS1" datafield="name" />
+				<binding property="state"    datasource="asterix253DS1" datafield="state" datakey="87 31"/>
+			</databinding>
+
+			<states>
+				<default state="0" />
+				<state status="0">
+					<image>../share/images/HostDisable.png</image>
+				</state>
+				<state status="1">
+					<image>../share/images/HostOff.png</image>
+				</state>
+				<state status="2,3">
+					<image>../share/images/HostOK.png</image>
+				</state>
+				<state status="4">
+					<image>../share/images/HostHZ.png</image>
+				</state>
+				<state status="5">
+					<image>../share/images/HostAlarm.png</image>
+				</state>
+			</states>
+		</widget>
+		<widget id="asterix2" 
+			zOrder="8" 
+			showTitle="true" 
+			showBorder="false"
+			name="Name2" >
+			<description>Local asterix253 RLK widget</description>
+			<boundingRect x="260" y="275" width="150" height="160" />
+			
+			
+			<databinding>
+				<binding property="textTL" datasource="asterix253DS2" datafield="name" />
+				<binding property="state"    datasource="asterix253DS2" datafield="firstState" datakey="87 1" />
+			</databinding>
+
+			<states>
+				<default state="0" />
+				<state status="0">
+					<image>../share/images/HostDisable.png</image>
+				</state>
+				<state status="1">
+					<image>../share/images/HostOff.png</image>
+				</state>
+				<state status="2,3">
+					<image>../share/images/HostOK.png</image>
+				</state>
+				<state status="4">
+					<image>../share/images/HostHZ.png</image>
+				</state>
+				<state status="5">
+					<image>../share/images/HostAlarm.png</image>
+				</state>
+			</states>
+		</widget>
+		<widget id="snmp1" zOrder="2" showTitle="false" showBorder="false" parentId="host1">
+			<description>local state</description>
+			<boundingRect x="60" y="40" width="30" height="30" />
+			
+			<databinding>
+				<binding property="state" datasource="snmp1" datafield="state" datakey="local" /> 
+			</databinding>
+
+			<states>
+				<default state="3" />
+				<state status="0,1">
+					<image>../share/images/NetworkDisable.png</image>
+				</state>
+				<state status="2">
+					<image>../share/images/NetworkOK.png</image>
+				</state>
+				<state status="3,4,5">
+					<image>../share/images/NetworkAlarm.png</image>
+				</state>
+			</states>
+		</widget>
+	</widgets>
+    <scripts>
+        <logout></logout>
+    </scripts>
+</monitorConfig>
+

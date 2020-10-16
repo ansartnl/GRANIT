@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<n ver="1.1">
+    <n n="Identifier" v="UMMM-DCL" _d="Service identifer. Should be equal to izmqt queue name of connection to D-Portal"/>
+    <n n="Name" v="DCL Client"/>
+    <n n="ProgramState">
+        <n n="Name" v="Program state"/>
+        <n n="Oid" v=".1.3.6.1.4.1.252093.611196.0.1"/>
+    </n>
+    <n n="ReadOnly">
+        <n n="AircomState">
+            <n n="Key" v="aircom_state"/>
+            <n n="Name" v="Aircom state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.2.7"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="AtsConnectTime">
+            <n n="Key" v="ats_connect_time"/>
+            <n n="Name" v="ATS connect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.3.5"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="AtsConnectionCount">
+            <n n="Key" v="ats_connection_count"/>
+            <n n="Name" v="ATS connection count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.3.3"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="AtsDisconnectTime">
+            <n n="Key" v="ats_disconnect_time"/>
+            <n n="Name" v="ATS disconnect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.3.6"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="AtsDisconnectionCount">
+            <n n="Key" v="ats_disconnection_count"/>
+            <n n="Name" v="ATS disconnection count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.3.4"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="AtsPort">
+            <n n="Key" v="ats_port"/>
+            <n n="Name" v="ATS port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.3.2"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="AtsState">
+            <n n="Key" v="ats_state"/>
+            <n n="Name" v="ATS state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.3.1"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DPortalAddress">
+            <n n="Key" v="d-portal_address"/>
+            <n n="Name" v="D-Portal address"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.2.2"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DPortalConnectTime">
+            <n n="Key" v="d-portal_connect_time"/>
+            <n n="Name" v="D-Portal connect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.2.5"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="DPortalConnectionCount">
+            <n n="Key" v="d-portal_connection_count"/>
+            <n n="Name" v="D-Portal connection count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.2.4"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="DPortalDisconnectTime">
+            <n n="Key" v="d-portal_disconnect_time"/>
+            <n n="Name" v="D-Portal disconnect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.2.6"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="DPortalPort">
+            <n n="Key" v="d-portal_port"/>
+            <n n="Name" v="D-Portal port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.2.3"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DPortalState">
+            <n n="Key" v="d-portal_state"/>
+            <n n="Name" v="D-Portal state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.2.1"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DbAddress">
+            <n n="Key" v="db_address"/>
+            <n n="Name" v="Db address"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.1.1"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DbName">
+            <n n="Key" v="db_name"/>
+            <n n="Name" v="DCL database schema name"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.1.3"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DbPort">
+            <n n="Key" v="db_port"/>
+            <n n="Name" v="Db port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.1.2"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="Identifier">
+            <n n="Key" v="identifier"/>
+            <n n="Name" v="Service identifier"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.4.3"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="StartTime">
+            <n n="Key" v="start_time"/>
+            <n n="Name" v="start time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.4.1"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="UptimeMinutes">
+            <n n="Key" v="uptime_minutes"/>
+            <n n="Name" v="uptime minutes"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.2.4.2"/>
+            <n n="Type" v="counter32"/>
+        </n>
+    </n>
+    <n n="Scripts">
+        <n n="RestartScript">
+            <n n="Arguments" v="restart dcl"/>
+            <n n="Name" v="Restart DCL script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.1.3"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="StartScript">
+            <n n="Arguments" v="start dcl"/>
+            <n n="Name" v="Start DCL script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.1.1"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="StopScript">
+            <n n="Arguments" v="stop dcl"/>
+            <n n="Name" v="Stop DCL script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.611196.1.2"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+    </n>
+</n>

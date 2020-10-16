@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<n ver="1.1">
+    <n n="Identifier" v="Admin" _d="Service identifer. Should be unique on this computer"/>
+    <n n="Name" v="Admin"/>
+    <n n="Scripts">
+        <n n="SetSlave">
+            <n n="Arguments" v="SetSlave"/>
+            <n n="Name" v="Set database status as slave"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.1"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="SetMaster">
+            <n n="Arguments" v="SetMaster"/>
+            <n n="Name" v="Set database status as master"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.2"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="Detach">
+            <n n="Arguments" v="Detach"/>
+            <n n="Name" v="Detach database from pgpool"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.3"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="MakeDump">
+            <n n="Arguments" v="MakeDump"/>
+            <n n="Name" v="Dump database"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.4"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="LoadDump">
+            <n n="Arguments" v="LoadDump"/>
+            <n n="Name" v="Restore database from dump"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.5"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="CreateDb">
+            <n n="Arguments" v="CreateDb"/>
+            <n n="Name" v="Create database"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.6"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="ChangePool">
+            <n n="Arguments" v="ChangePool"/>
+            <n n="Name" v="Change database master/slave status"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.7"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="Reboot">
+            <n n="Arguments" v="Reboot"/>
+            <n n="Name" v="Reboot a computer"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.8"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="Shutdown">
+            <n n="Arguments" v="Shutdown"/>
+            <n n="Name" v="Shutdown a computer"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.9"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="Start1">
+            <n n="Arguments" v="Start1"/>
+            <n n="Name" v="Additional script 1"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.10"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="Start2">
+            <n n="Arguments" v="Start2"/>
+            <n n="Name" v="Additional script 2"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.11"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="Start3">
+            <n n="Arguments" v="Start3"/>
+            <n n="Name" v="Additional script 3"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.346325.12"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+    </n>
+</n>

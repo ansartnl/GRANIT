@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EventLogDialog</class>
+ <widget class="QDialog" name="EventLogDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>607</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Event Log</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0" colspan="3">
+    <widget class="QTableView" name="logTable"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="buttonPrint">
+     <property name="text">
+      <string>Print...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>343</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Filter</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout" columnstretch="1,1,1,1">
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="lineService"/>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="lineEvent"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineHost"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QDateEdit" name="date">
+        <property name="displayFormat">
+         <string>dd.MM.yyyy</string>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="4">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QCheckBox" name="checkShowFailure">
+          <property name="text">
+           <string>Show failures only</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonResetFilter">
+          <property name="text">
+           <string>Reset filter</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>logTable</tabstop>
+  <tabstop>date</tabstop>
+  <tabstop>lineHost</tabstop>
+  <tabstop>lineService</tabstop>
+  <tabstop>lineEvent</tabstop>
+  <tabstop>checkShowFailure</tabstop>
+  <tabstop>buttonResetFilter</tabstop>
+  <tabstop>buttonPrint</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

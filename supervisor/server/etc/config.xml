@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <active_group>Simulator-Group</active_group>
+    <autostart>true</autostart>
+    <databases>
+        <database1 id="Coala">
+            <driver>QOCI</driver>
+            <host>192.20.1.62</host>
+            <name>XE</name>
+            <password>aero</password>
+            <port>1521</port>
+            <user>aero</user>
+        </database1>
+        <database2 id="Panda">
+            <driver>QOCI</driver>
+            <host>192.20.1.81</host>
+            <name>XE</name>
+            <password>aero</password>
+            <port>1521</port>
+            <user>aero</user>
+        </database2>
+    </databases>
+    <groups>
+        <group1 visualName="CWP Group" id="CWP-Group">
+            <process1 order="1">STCA-Gr1-1</process1>
+            <process2 order="2">STCA-Gr1-2</process2>
+            <process3 order="3">CWP</process3>
+            <process4 order="4">StcaProc</process4>
+        </group1>
+        <group2 visualName="Simulator Group" id="Simulator-Group">
+            <process1 order="1">STCA-Gr1-1</process1>
+            <process2 order="2">Assistant</process2>
+            <process3 order="3">Notepad</process3>
+        </group2>
+        <group3 visualName="ADP Group" id="ADP-Group">
+            <process1 order="1">ServerA</process1>
+        </group3>
+    </groups>
+    <kill_timeout_ms>5000</kill_timeout_ms>
+    <language>english</language>
+    <log>true</log>
+    <logs>
+        <log1>
+            <name>tomcat1</name>
+            <path>/var/log/syslog</path>
+        </log1>
+        <log2>
+            <name>tomcat2</name>
+            <path>/var/log/syslog</path>
+        </log2>
+    </logs>
+    <network>
+        <host>0.0.0.0</host>
+        <port>4086</port>
+    </network>
+    <processes>
+        <adp id="ServerA">
+            <adp>true</adp>
+            <arguments>-e</arguments>
+            <database>Coala</database>
+            <description>ADP service description can be here</description>
+            <log_path>d:\ADP\log\adp.log</log_path>
+            <path>d:\ADP\bin\adp.exe</path>
+            <restart>true</restart>
+            <status_path>d:\ADP\status_db</status_path>
+            <visualName>АДП сервис А</visualName>
+        </adp>
+        <assistant id="Assistant">
+            <config_path>d:\Work\Projects\SVN\aeronavigation\master\etc\cwp.xml</config_path>
+            <database>Panda</database>
+            <description>Qt help</description>
+            <log_path>D:\Projects\ekinavi\test\log.txt</log_path>
+            <path>c:\Qt\4.7.4\bin\assistant.exe</path>
+            <restart>false</restart>
+            <visualName>Qt Assistant</visualName>
+        </assistant>
+        <!-- 
+			Services with special behaviour: FMTP, FDP, ADP, CWP.
+			
+			Special flags:
+			- <fdp>true<fdp>
+			- <fmtp>false<fmtp>
+			- <cwp>false<cwp>
+			- <adp>true<adp>
+			
+			Example:
+			<cwp_processor1 id="CWP-Process">
+				<cwp>true<cwp>
+				<path>d:\PathToCWP\cwp.exe</path>
+		-->
+        <cwp id="CWP">
+            <arguments>"d:\Work\Projects\SVN\ekinavi\simulator\_AVIA_2012_06_27\App\etc\cwp.xml" --user=XMaster --password=</arguments>
+            <cwp>true</cwp>
+            <database>Coala</database>
+            <description>CWP working place</description>
+            <log_path>d:\Work\Projects\SVN\ekinavi\simulator\supervisor\server\bin\cwp.log</log_path>
+            <path>d:\Work\Projects\SVN\ekinavi\simulator\_AVIA_2012_06_27\App\bin\cwp.exe</path>
+            <restart>false</restart>
+            <visualName>Рабочее место CWP</visualName>
+        </cwp>
+        <stca id="Notepad">
+            <arguments>-e "d:\Work\Projects\SVN\ekinavi\simulator\_AVIA_2012_06_27\App\etc\stca.xml"</arguments>
+            <database>Coala</database>
+            <description>Notepad process desc</description>
+            <path>c:/Windows/System32/notepad.exe</path>
+            <restart>false</restart>
+            <visualName>Notepad процесс</visualName>
+        </stca>
+    </processes>
+    <restart_timeout_ms>1000</restart_timeout_ms>
+    <scripts>
+        <script1>
+            <name>test</name>
+            <path>C:/test.bat</path>
+        </script1>
+        <script2>
+            <name>test2</name>
+            <path>C:/test2.bat</path>
+        </script2>
+        <script3>
+            <name>mem</name>
+            <path>C:/test3.bat</path>
+        </script3>
+    </scripts>
+    <services>
+        <!-- 
+			Services with special behaviour: FMTP, FDP, ADP.
+			
+			Special flags:
+			- <fdp>true<fdp>
+			- <fmtp>false<fmtp>
+			- <adp>true<adp>
+			
+			Example:
+			<fdp_service1 id="FDP-1">
+				<fdp>true<fdp>
+				<name>fdpservice</name>
+		-->
+        <stca_service1 id="STCA-Gr1-1">
+            <config_path>d:\Work\Projects\SVN\ekinavi\simulator\stca\stca\bin\1\stca-a.xml</config_path>
+            <database>Coala</database>
+            <description>STCA Service. Airplane conflict monitoring</description>
+            <log_path>d:\Work\Projects\SVN\ekinavi\simulator\stca\stca\bin\1\stca-a.log</log_path>
+            <name>stca-a</name>
+            <restart>true</restart>
+            <visualName>STCA (+ NFC checker)</visualName>
+        </stca_service1>
+        <stca_service2 id="STCA-Gr1-2">
+            <config_path>d:\Work\Projects\SVN\ekinavi\simulator\stca\stca\bin\2\stca-b.xml</config_path>
+            <description>STCA Service. Airplane conflict monitoring</description>
+            <log_path>d:\Work\Projects\SVN\ekinavi\simulator\stca\stca\bin\2\stca-b.log</log_path>
+            <name>stca-b</name>
+            <restart>true</restart>
+            <visualName>STCA for Airplane monitoring only</visualName>
+        </stca_service2>
+    </services>
+    <snmp>
+        <agent1>
+            <community>public</community>
+            <host>localhost</host>
+            <name>local</name>
+            <period>10</period>
+            <traps>
+                <trap1>
+                    <name>trap</name>
+                    <oid>.1.3.6.1.2.1.1.6.0</oid>
+                </trap1>
+            </traps>
+            <variables>
+                <variable1>
+                    <name>test</name>
+                    <oid>.1.3.6.1.2.1.1.5.0</oid>
+                    <read>true</read>
+                    <type>s</type>
+                    <write>true</write>
+                </variable1>
+                <variable2>
+                    <name>test2</name>
+                    <oid>.1.3.6.1.2.1.1.9.1.3.10</oid>
+                    <read>true</read>
+                </variable2>
+            </variables>
+        </agent1>
+    </snmp>
+    <tracked_folder>
+        <enabled>true</enabled>
+        <path>D:/tmp</path>
+        <period>8</period>
+    </tracked_folder>
+</root>

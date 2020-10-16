@@ -1,0 +1,60 @@
+COMMON-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    enterprises, Integer32                  FROM SNMPv2-SMI
+;
+
+common MODULE-IDENTITY
+    LAST-UPDATED "201403131310Z"    -- UTC
+    ORGANIZATION "NITA"
+    CONTACT-INFO "e-mail: "
+    DESCRIPTION "Base MIB"
+    ::= { enterprises 252093 }
+
+--
+-- The value zero (0) must not be used as an enumerated type, according to RFC 1155.
+--
+
+Bool ::= INTEGER {
+    False(1),
+    True(2)
+}
+
+ProgramState ::= INTEGER {
+    Down(1),
+    Up(2)
+}
+
+RunScript ::= INTEGER {
+    Stopped(1),
+    Run(2),
+    Running(3)
+}
+
+String ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "255t"
+    STATUS       current
+    DESCRIPTION
+    "For some wierd reason 1472 is the longest available
+    length for a package.
+    Details read here: http://www.net-snmp.org/FAQ.html 
+    Update: changed to 1024 (fixed crash on Oracle Linux 6)
+    "
+    SYNTAX       OCTET STRING (SIZE (0..1024))
+
+--
+-- Ping
+--
+
+ping            OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+    "Is used by netSnmpManager for determination of snmpd status.
+    Value is irrelevant.
+    "
+    DEFVAL { 0 }
+    ::= { common 0 }
+
+END

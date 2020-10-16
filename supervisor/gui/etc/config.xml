@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<monitored_hosts>
+		<CWP0>
+			<name>Visual name: CWP</name>
+			<host>127.0.0.1</host>
+			<port>4086</port>
+		</CWP0>
+		<CWP1>
+			<name>Visual name: CWP1</name>
+			<host>192.20.1.223</host>
+			<port>4086</port>
+		</CWP1>
+		<CWP3>
+			<name>Visual name: CWP3</name>
+			<host>192.20.1.224</host>
+			<port>4086</port>
+		</CWP3>
+		<AFTNWS1>
+			<name>Visual name: Aftnws</name>
+			<host>192.20.1.10</host>
+			<host2>10.0.0.1</host2>
+			<port>4086</port>
+		</AFTNWS1>
+	</monitored_hosts>
+	<reconnection_timeout>10</reconnection_timeout>
+	<log>true</log>
+	<event_list_size>30</event_list_size>
+	<simplified_view>false</simplified_view>
+	<language>russian</language>
+	<alert>d:\Work\Projects\SVN\ekinavi\pelengru\atissystem\sound\AUDIO\ru\zulu_ru.wav</alert>
+	<flash_path>d:\temp\flash emu</flash_path>
+</root>

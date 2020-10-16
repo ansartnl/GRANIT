@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <Log>
+        <Level>6</Level>
+    </Log>
+    <Clients>
+        <testClient>testClient.conf</testClient>
+        <fansClient>fansClient.conf</fansClient>
+        <datisClient>datisClient.conf</datisClient>
+        <dclClient>dclClient.conf</dclClient>
+        <dvolmetClient>dvolmetClient.conf</dvolmetClient>
+        <dportalClient>dportalClient.conf</dportalClient>
+        <database>database.conf</database>
+        <admin>admin.conf</admin>
+    </Clients>
+    <ClientTimerMs>1000</ClientTimerMs>
+    <ManagerLoopTimerMs>0</ManagerLoopTimerMs>
+    <PingOid>.1.3.6.1.4.1.252093.0</PingOid>
+    <Traps>
+        <Community>thedarkempire</Community>
+        <Receivers>127.0.0.1,10.0.0.10</Receivers>
+    </Traps>
+</root>

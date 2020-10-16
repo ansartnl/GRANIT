@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <active_group>Airplan</active_group>
+    <autostart>true</autostart>
+    <databases>
+        <database1 id="AdpDatabase">
+            <driver>QMYSQL</driver>
+            <host>127.0.0.1</host>
+            <name>airplan</name>
+            <password>aero</password>
+            <port>3306</port>
+            <user>aero</user>
+        </database1>
+    </databases>
+    <groups>
+        <group1 visualName="airplan" id="Airplan">
+            <process1 order="1">ServerA</process1>
+        </group1>
+    </groups>
+    <language>english</language>
+    <log>true</log>
+    <network>
+        <host>0.0.0.0</host>
+        <port>4086</port>
+    </network>
+    <processes>
+        <adp_service id="ServerA">
+            <adp>true</adp>
+            <arguments>-e</arguments>
+            <database>AdpDatabase</database>
+            <description>Service</description>
+            <path>D:\PROJECTS\airplan_urgency\trunk\airplan\adpService\bin\adpService_debug.exe</path>
+            <restart>true</restart>
+            <status_path>D:\PROJECTS\airplan_urgency\trunk\airplan\server\status_DB</status_path>
+            <visualName>AdpService</visualName>
+        </adp_service>
+    </processes>
+    <restart_timeout_ms>1000</restart_timeout_ms>
+    <scripts>
+        <script1>
+            <name>undefined</name>
+            <path>D:\PROJECTS\airplan_urgency\trunk\airplan\server\1.bat</path>
+        </script1>
+        <script2>
+            <name>run_start_m</name>
+            <path>D:\PROJECTS\airplan_urgency\trunk\airplan\server\1.bat</path>
+        </script2>
+        <script3>
+            <name>mem</name>
+            <path>C:/test3.bat</path>
+        </script3>
+        <script4>
+            <name>restart_PC</name>
+            <path>D:\PROJECTS\airplan_urgency\trunk\airplan\server\1.bat</path>
+        </script4>
+        <script5>
+            <name>shut_down_PC</name>
+            <path>D:\PROJECTS\airplan_urgency\trunk\airplan\server\1.bat</path>
+        </script5>
+        <script6>
+            <name>test</name>
+            <path>D:\PROJECTS\airplan_urgency\trunk\airplan\server\1.bat</path>
+        </script6>
+    </scripts>
+</root>

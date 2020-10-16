@@ -1,0 +1,170 @@
+TEST-NET-SNMP-CLIENT-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, OBJECT-TYPE,
+    Integer32, NOTIFICATION-TYPE,
+    IpAddress, Counter32, Counter64         FROM SNMPv2-SMI
+    DateAndTime                             FROM SNMPv2-TC
+    common, RunScript, ProgramState,
+    String                                  FROM COMMON-MIB
+;
+
+testNetSnmpClient MODULE-IDENTITY
+    LAST-UPDATED "201401171133Z"    -- UTC
+    ORGANIZATION ""
+    CONTACT-INFO "e-mail: "
+    DESCRIPTION "Test MIB"
+    ::= { common 555730 }
+
+--
+-- top level objects
+--
+
+general         OBJECT IDENTIFIER ::= { testNetSnmpClient 0 }
+commands        OBJECT IDENTIFIER ::= { testNetSnmpClient 1 }
+readonly        OBJECT IDENTIFIER ::= { testNetSnmpClient 2 }
+readwrite       OBJECT IDENTIFIER ::= { testNetSnmpClient 3 }
+traps           OBJECT IDENTIFIER ::= { testNetSnmpClient 4 }
+
+--
+-- program state
+--
+
+programState    OBJECT-TYPE
+    SYNTAX      ProgramState
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+    "Program state: started/stopped"
+    DEFVAL { Down }
+    ::= { general 1 }
+
+--
+-- scripts
+--
+
+testScript      OBJECT-TYPE
+    SYNTAX      RunScript
+    MAX-ACCESS  read-write
+    STATUS      current
+    DESCRIPTION
+    "Test script"
+    DEFVAL { Stopped }
+    ::= { commands 1 }
+
+--
+-- read-only values
+--
+
+testString      OBJECT-TYPE
+    SYNTAX      String
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+    "Test read-only string"
+    ::= { readonly 1 }
+
+ipAddress       OBJECT-TYPE
+    SYNTAX      IpAddress
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+    "Test read-only ip address"
+    ::= { readonly 2 }
+
+startTime       OBJECT-TYPE
+    SYNTAX      DateAndTime
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+    "UTC date and time of starting of application"
+    ::= { readonly 3 }
+
+startTimeWithZone OBJECT-TYPE
+    SYNTAX      DateAndTime
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+    "Local date and time of starting of application with zone information"
+    ::= { readonly 4 }
+
+counter         OBJECT-TYPE
+    SYNTAX      Counter64
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+    "Test counter"
+    ::= { readonly 5 }
+
+smallCounter    OBJECT-TYPE
+    SYNTAX      Counter32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+    "Test counter 2"
+    ::= { readonly 6 }
+
+--
+-- read-write values
+--
+
+writableString  OBJECT-TYPE
+    SYNTAX      String
+    MAX-ACCESS  read-write
+    STATUS      current
+    DESCRIPTION
+    "Test writable string"
+    ::= { readwrite 1 }
+
+writableInt     OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-write
+    STATUS      current
+    DESCRIPTION
+    "Test writable integer"
+    ::= { readwrite 2 }
+
+writableInt2    OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-write
+    STATUS      current
+    DESCRIPTION
+    "Test writable integer"
+    ::= { readwrite 3 }
+
+writableInt3    OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-write
+    STATUS      current
+    DESCRIPTION
+    "Test writable integer"
+    ::= { readwrite 4 }
+
+ipAddress2      OBJECT-TYPE
+    SYNTAX      IpAddress
+    MAX-ACCESS  read-write
+    STATUS      current
+    DESCRIPTION
+    "Test read-write ip address"
+    ::= { readwrite 5 }
+
+testTime        OBJECT-TYPE
+    SYNTAX      DateAndTime
+    MAX-ACCESS  read-write
+    STATUS      current
+    DESCRIPTION
+    "Test date and time for writing"
+    ::= { readwrite 6 }
+
+--
+-- traps
+--
+
+testTrap        NOTIFICATION-TYPE
+    STATUS      current
+    OBJECTS     { writableString }
+    DESCRIPTION
+    "Test trap"
+    ::= { traps 1 }
+
+END

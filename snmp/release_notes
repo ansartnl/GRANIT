@@ -1,0 +1,37 @@
+﻿
+Версия 1.1
+
+Добавил поддержку xml в стиле NITA.
+
+Добавил netSnmpTrapHandler.
+
+Добавил поддержку ловушек.
+
+Добавил поддержку типов:
+ - Counter32
+ - Counter64
+ - DateAndTime (8)
+ - DateAndTime (11)
+ - IpAddress
+
+Исправил проблему с точками в строке.
+
+Версия 1.0
+
+Добавил ping для определения состояния субагента.
+
+Поддерживаемые типы:
+ - Integer
+ - String (0..1024)
+ - ProgramState (enum)
+ - RunScript (enum)
+
+Добавил testManager.
+Добавил netSnmpManager.
+
+Добавил testClient.
+Добавил netSnmpClient.
+
+Создал netSnmpSubagent.
+
+Первый коммит

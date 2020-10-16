@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<n ver="1.1">
+    <n n="Identifier" v="UMMM-D-VOLMET" _d="Service identifer. Should be equal to izmqt queue name of connection to D-Portal"/>
+    <n n="Name" v="DVolmet Client"/>
+    <n n="ProgramState">
+        <n n="Name" v="Program state"/>
+        <n n="Oid" v=".1.3.6.1.4.1.252093.64120.0.1"/>
+    </n>
+    <n n="ReadOnly">
+        <n n="AircomState">
+            <n n="Key" v="aircom_state"/>
+            <n n="Name" v="Aircom state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.2.9"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DPortalAddress">
+            <n n="Key" v="d-portal_address"/>
+            <n n="Name" v="D-Portal address"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.2.2"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DPortalConnectTime">
+            <n n="Key" v="d-portal_connect_time"/>
+            <n n="Name" v="D-Portal connect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.2.5"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="DPortalConnectionCount">
+            <n n="Key" v="d-portal_connection_count"/>
+            <n n="Name" v="D-Portal connection count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.2.4"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="DPortalDisconnectTime">
+            <n n="Key" v="d-portal_disconnect_time"/>
+            <n n="Name" v="D-Portal disconnect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.2.6"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="DPortalPort">
+            <n n="Key" v="d-portal_port"/>
+            <n n="Name" v="D-Portal port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.2.3"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DPortalState">
+            <n n="Key" v="d-portal_state"/>
+            <n n="Name" v="D-Portal state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.2.1"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DbAddress">
+            <n n="Key" v="db_address"/>
+            <n n="Name" v="Db address"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.1.1"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DbDVolmet">
+            <n n="Key" v="db_dvolmet"/>
+            <n n="Name" v="First database schema name"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.1.3"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DbPort">
+            <n n="Key" v="db_port"/>
+            <n n="Name" v="Db port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.1.2"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DbStorage">
+            <n n="Key" v="db_storage"/>
+            <n n="Name" v="Second database schema name"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.1.4"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="Identifier">
+            <n n="Key" v="identifier"/>
+            <n n="Name" v="Service identifier"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.4.3"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="StartTime">
+            <n n="Key" v="start_time"/>
+            <n n="Name" v="start time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.4.1"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="UptimeMinutes">
+            <n n="Key" v="uptime_minutes"/>
+            <n n="Name" v="uptime minutes"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.4.2"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="VolmetAddress">
+            <n n="Key" v="volmet_address"/>
+            <n n="Name" v="Volmet address"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.3.2"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="VolmetConnectTime">
+            <n n="Key" v="volmet_connect_time"/>
+            <n n="Name" v="Volmet connect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.3.5"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="VolmetConnectionCount">
+            <n n="Key" v="volmet_connection_count"/>
+            <n n="Name" v="Volmet connection count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.3.4"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="VolmetDisconnectTime">
+            <n n="Key" v="volmet_disconnect_time"/>
+            <n n="Name" v="Volmet disconnect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.3.6"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="VolmetPort">
+            <n n="Key" v="volmet_port"/>
+            <n n="Name" v="Volmet port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.3.3"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="VolmetState">
+            <n n="Key" v="volmet_state"/>
+            <n n="Name" v="Volmet state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.2.3.1"/>
+            <n n="Type" v="integer"/>
+        </n>
+    </n>
+    <n n="Scripts">
+        <n n="RestartScript">
+            <n n="Arguments" v="restart dvolmet"/>
+            <n n="Name" v="Restart DVolmet script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.1.3"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="StartScript">
+            <n n="Arguments" v="start dvolmet"/>
+            <n n="Name" v="Start DVolmet script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.1.1"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="StopScript">
+            <n n="Arguments" v="stop dvolmet"/>
+            <n n="Name" v="Stop DVolmet script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.64120.1.2"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+    </n>
+</n>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<n ver="1.1">
+    <n n="Log" _d="Log writing settings">
+        <n n="Level" v="6" _d="Maximum log level, wanted to be written" _r="0-6"/>
+    </n>
+    <n n="Clients" _d="Open list of conf files to be read">
+        <n n="fansClient" v="conf_fansClient.xml"/>
+        <n n="datisClient" v="conf_datisClient.xml"/>
+        <n n="dclClient" v="conf_dclClient.xml"/>
+        <n n="dvolmetClient" v="conf_dvolmetClient.xml"/>
+        <n n="dportalClient" v="conf_dportalClient.xml"/>
+        <n n="database" v="conf_database.xml"/>
+        <n n="admin" v="conf_admin.xml"/>
+    </n>
+    <n n="ClientTimerMs" v="1000" _d="Time interval between reading clients' monitored variables" _u="ms"/>
+    <n n="ManagerLoopTimerMs" v="0" _d="Time interval between reading snmp queries" _u="ms" _r="0-1"/>
+    <n n="PingOid" v=".1.3.6.1.4.1.252093.0" _d="OID of control value for checking subagent accessibility"/>
+    <n n="Traps" _d="Traps settings">
+        <n n="Community" v="thedarkempire" _d="Community of session under which traps would be sent"/>
+        <n n="Receivers" v="127.0.0.1" _d="Comma separated list of addresses of traps receivers"/>
+    </n>
+</n>

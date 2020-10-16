@@ -1,0 +1,12 @@
+
+[Desktop Entry]
+Version=1.2.0
+Encoding=UTF-8
+Name=SupervisorServer Autostart
+Type=Application
+Comment=Autostart SupervisorServer application
+Exec=/home/peleng/TAN/bin/SupervisorServer.sh
+Terminal=true
+GenericName[ru_RU]=
+
+GenericName=SupervisorServer

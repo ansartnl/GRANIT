@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<n ver="1.1">
+    <n n="Identifier" v="DPortal" _d="Service identifer. Should be unique on this computer"/>
+    <n n="Name" v="D-Portal Client"/>
+    <n n="ProgramState">
+        <n n="Name" v="Program state"/>
+        <n n="Oid" v=".1.3.6.1.4.1.252093.790689.0.1"/>
+    </n>
+    <n n="ReadOnly">
+        <n n="AircomAddress1">
+            <n n="Key" v="aircom_address1"/>
+            <n n="Name" v="AIRCOM net 1 address"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.2"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="AircomAddress2">
+            <n n="Key" v="aircom_address2"/>
+            <n n="Name" v="AIRCOM net 2 address"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.10"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="AircomConnectTime1">
+            <n n="Key" v="aircom_connect_time1"/>
+            <n n="Name" v="AIRCOM net 1 connect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.7"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="AircomConnectTime2">
+            <n n="Key" v="aircom_connect_time2"/>
+            <n n="Name" v="AIRCOM net 2 connect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.15"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="AircomConnectionCount1">
+            <n n="Key" v="aircom_connection_count1"/>
+            <n n="Name" v="AIRCOM net 1 connection count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.6"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="AircomConnectionCount2">
+            <n n="Key" v="aircom_connection_count2"/>
+            <n n="Name" v="AIRCOM net 2 connection count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.14"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="AircomDisconnectTime1">
+            <n n="Key" v="aircom_disconnect_time1"/>
+            <n n="Name" v="AIRCOM net 1 disconnect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.8"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="AircomDisconnectTime2">
+            <n n="Key" v="aircom_disconnect_time2"/>
+            <n n="Name" v="AIRCOM net 2 disconnect time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.16"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="AircomPort1">
+            <n n="Key" v="aircom_port1"/>
+            <n n="Name" v="AIRCOM net 1 port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.3"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="AircomPort2">
+            <n n="Key" v="aircom_port2"/>
+            <n n="Name" v="AIRCOM net 2 port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.11"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="AircomReceived1">
+            <n n="Key" v="aircom_received1"/>
+            <n n="Name" v="AIRCOM net 1 received"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.4"/>
+            <n n="Type" v="counter64"/>
+        </n>
+        <n n="AircomReceived2">
+            <n n="Key" v="aircom_received2"/>
+            <n n="Name" v="AIRCOM net 2 received"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.12"/>
+            <n n="Type" v="counter64"/>
+        </n>
+        <n n="AircomState1">
+            <n n="Key" v="aircom_state1"/>
+            <n n="Name" v="AIDCOM net 1 state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.1"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="AircomState2">
+            <n n="Key" v="aircom_state2"/>
+            <n n="Name" v="AIDCOM net 2 state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.9"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="AircomTransmitted1">
+            <n n="Key" v="aircom_transmitted1"/>
+            <n n="Name" v="AIRCOM net 1 transmitted"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.5"/>
+            <n n="Type" v="counter64"/>
+        </n>
+        <n n="AircomTransmitted2">
+            <n n="Key" v="aircom_transmitted2"/>
+            <n n="Name" v="AIRCOM net 2 transmitted"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.2.13"/>
+            <n n="Type" v="counter64"/>
+        </n>
+        <n n="DAtisCount">
+            <n n="Key" v="datis_count"/>
+            <n n="Name" v="DAtis count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.3.5"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="DAtisNames">
+            <n n="Key" v="datis_names"/>
+            <n n="Name" v="DAtis names"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.3.6"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DPortalStatus">
+            <n n="Key" v="d-portal_status"/>
+            <n n="Name" v="D-Portal status"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.4.1"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DVolmetCount">
+            <n n="Key" v="dvolmet_count"/>
+            <n n="Name" v="DVolmet count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.3.7"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="DVolmetNames">
+            <n n="Key" v="dvolmet_names"/>
+            <n n="Name" v="DVolmet names"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.3.8"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DbAddress">
+            <n n="Key" v="db_address"/>
+            <n n="Name" v="Db address"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.1.1"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DbName">
+            <n n="Key" v="db_name"/>
+            <n n="Name" v="Db schema name"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.1.3"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="DbPort">
+            <n n="Key" v="db_port"/>
+            <n n="Name" v="Db port"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.1.2"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="DclCount">
+            <n n="Key" v="dcl_count"/>
+            <n n="Name" v="DCL count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.3.3"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="DclNames">
+            <n n="Key" v="dcl_names"/>
+            <n n="Name" v="DCL names"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.3.4"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="FansCount">
+            <n n="Key" v="fans_count"/>
+            <n n="Name" v="FANS count"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.3.1"/>
+            <n n="Type" v="counter32"/>
+        </n>
+        <n n="FansNames">
+            <n n="Key" v="fans_names"/>
+            <n n="Name" v="FANS names"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.3.2"/>
+            <n n="Type" v="string"/>
+        </n>
+        <n n="StartTime">
+            <n n="Key" v="start_time"/>
+            <n n="Name" v="start time"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.4.2"/>
+            <n n="Type" v="dateandtime"/>
+        </n>
+        <n n="UptimeMinutes">
+            <n n="Key" v="uptime_minutes"/>
+            <n n="Name" v="uptime minutes"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.2.4.3"/>
+            <n n="Type" v="counter32"/>
+        </n>
+    </n>
+    <n n="ReadWrite">
+        <n n="BecomeMaster">
+            <n n="Key" v="become_master"/>
+            <n n="Name" v="Become master command"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.1.4"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="BecomeSlave">
+            <n n="Key" v="become_slave"/>
+            <n n="Name" v="Become slave command"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.1.5"/>
+            <n n="Type" v="integer"/>
+        </n>
+    </n>
+    <n n="Scripts">
+        <n n="RestartScript">
+            <n n="Arguments" v="restart d-portal"/>
+            <n n="Name" v="Restart D-Portal script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.1.3"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="StartScript">
+            <n n="Arguments" v="start d-portal"/>
+            <n n="Name" v="Start D-Portal script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.1.1"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+        <n n="StopScript">
+            <n n="Arguments" v="stop d-portal"/>
+            <n n="Name" v="Stop D-Portal script"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.1.2"/>
+            <n n="Path" v="/home/user/1.sh"/>
+        </n>
+    </n>
+    <n n="Traps">
+        <n n="DPortalStatusTrap">
+            <n n="Key" v="dportal_status_trap"/>
+            <n n="Name" v="D-Portal status trap"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.790689.4.1"/>
+        </n>
+    </n>
+</n>

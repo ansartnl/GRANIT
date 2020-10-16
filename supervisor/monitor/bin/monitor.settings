@@ -1,0 +1,13 @@
+[General]
+AlarmPath=../share/sound/alarm.wav
+Asterix253IdleTimeout=24
+EnableAsterixLog=false
+EventLogName=SMC
+EventLogPath=./smc
+FlashPath=/media/flash
+LogFileName=./SMC_log
+LogFileSize=40
+SupervisorMonitorFixedHeight=947
+SupervisorMonitorFixedSize=true
+SupervisorMonitorFixedWidht=1061
+recentFileList=/home/bcwp/SVN/ss/supervisor/monitor/etc/SupervisorMonitor.xml, /home/bcwp/agat/SMC/etc/SupervisorMonitor.xml

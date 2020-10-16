@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<n ver="1.1">
+    <n n="Identifier" v="Database" _d="Service identifer. Should be unique on this computer"/>
+    <n n="Name" v="Database"/>
+    <n n="ReadOnly">
+        <n n="DbState">
+            <n n="Key" v="db_state"/>
+            <n n="Name" v="Database state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.241375.1"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="PgPoolState">
+            <n n="Key" v="pgpool_state"/>
+            <n n="Name" v="PgPool state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.241375.2"/>
+            <n n="Type" v="integer"/>
+        </n>
+        <n n="ReplicationState">
+            <n n="Key" v="replication_state"/>
+            <n n="Name" v="Replication state"/>
+            <n n="Oid" v=".1.3.6.1.4.1.252093.241375.3"/>
+            <n n="Type" v="integer"/>
+        </n>
+    </n>
+</n>
