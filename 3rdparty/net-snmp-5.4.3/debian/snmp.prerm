@@ -1,0 +1,9 @@
+#! /bin/sh
+
+set -e
+
+killall -u snmp  2>/dev/null || true
+
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,12 @@
+diff -Naurp net-snmp-5.4.3.orig/agent/mibgroup/target/snmpTargetAddrEntry.c net-snmp-5.4.3/agent/mibgroup/target/snmpTargetAddrEntry.c
+--- net-snmp-5.4.3.orig/agent/mibgroup/target/snmpTargetAddrEntry.c	2007-01-23 11:13:41.000000000 -0500
++++ net-snmp-5.4.3/agent/mibgroup/target/snmpTargetAddrEntry.c	2010-08-25 10:17:21.507041261 -0400
+@@ -1501,7 +1501,7 @@ write_snmpTargetAddrRowStatus(int action
+                         "write to snmpTargetAddrRowStatus not ASN_INTEGER\n"));
+             return SNMP_ERR_WRONGTYPE;
+         }
+-        if (var_val_len != sizeof(int)) {
++        if (var_val_len != sizeof(long)) {
+             DEBUGMSGTL(("snmpTargetAddrEntry",
+                         "write to snmpTargetAddrRowStatus: bad length\n"));
+             return SNMP_ERR_WRONGLENGTH;

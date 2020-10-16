@@ -1,0 +1,36 @@
+#!/usr/bin/python
+
+'''apport hook for net-snmp
+
+(c) 2010 Andres Rodriguez
+Author: Andres Rodriguez <andreserl@ubuntu.com>
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+option) any later version.  See http://www.gnu.org/copyleft/gpl.html for
+the full text of the license.
+'''
+
+from apport.hookutils import *
+import re
+
+def add_info(report, ui):
+    response = ui.yesno("The contents of your /etc/snmp/snmpd.conf and "
+                        "your /etc/snmp/snmptrapd.conf files may help "
+                        "developers diagnose your bug more quickly.  "
+                        "However, it may contain sensitive information.  "
+                        "Do you want to include it in your bug report?")
+
+    if response == None: # user cancelled
+        raise StopIteration
+
+    elif response == True:
+        attach_conffiles(report, 'snmpd')
+
+        # get version
+        report['SNMPVersion'] = root_command_output(['/usr/sbin/snmpd', '-v'])
+
+        # get syslog stuff
+        report['SyslogSnmpd'] = recent_syslog(re.compile('snmpd\['))
+        report['SyslogSnmptrapd'] = recent_syslog(re.compile('snmptrapd\['))
